@@ -128,7 +128,7 @@ stu Expjson(char *s,int ifprint=1){
 	}
 /**************************************/
 
-/****************获取节点Chinese***********/
+/****************获取节点Math***********/
 	cJSON *Math = cJSON_GetObjectItem(Grade, "Math");
 	if(!Math) {
 		printf("No Math !\n");
@@ -136,7 +136,7 @@ stu Expjson(char *s,int ifprint=1){
 	}
 /**************************************/
 
-/****************获取节点Chinese***********/
+/****************获取节点English***********/
 	cJSON *English = cJSON_GetObjectItem(Grade, "English");
 	if(!English) {
 		printf("No English !\n");
@@ -520,8 +520,7 @@ void matching(int num,int *fileline){
 				}
 			    printf("---------------------------------------------------------------------------\n");
 				break;
-	case 4:		char str[20][100];
-				printf("将从以下内容中筛选需要补考的学生信息：\n");		
+	case 4:		printf("将从以下内容中筛选需要补考的学生信息：\n");		
 				initlistHead();
 				for(i=1;i<(fileline[0]+1);i++){
 					students[i-1]=getfullfile("1.txt",i);
@@ -532,8 +531,7 @@ void matching(int num,int *fileline){
 				}
 				printf("---------------------------------------------------------------------------\n");
 				printf("筛选后的补考信息如下，并将需要补考的学生信息已写入4.txt\n\n");
-				for(i=0;i<(fileline[0]+fileline[1]);i++){					
-					strcpy(str[i],needexamagain(students[i]));
+				for(i=0;i<(fileline[0]+fileline[1]);i++){
 					puts(needexamagain(students[i]));
 				};
 				break;

@@ -1,4 +1,4 @@
-# SAM
+#StuAchMan
 Student Achievement Management 学生成绩管理系统<br/>
 ###目录
 1. [课程设计的内容](#课程设计的内容)<br/>
